@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Indice_Academico.Data.Entity.Teacher>
+
+@{
+    ViewData["Title"] = "Profesores";
+}
+
+<div class="text-center">
+    <h1 class="float-left">Listado de Profesores</h1>
+    <a class="btn btn-outline-info float-right text-center" asp-action="Create">Registrar profesor</a>
+</div>
+<br />
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Id Profesor</label>
+            </th>
+            <th>
+                <label>Nombre</label>
+            </th>
+            <th>
+                <label>Apellido</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeacherCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lastname)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,70 @@
+﻿@model Indice_Academico.Data.DTO.AsignSubjectDTO
+
+@{
+    ViewData["Title"] = "Registrar Estudiante";
+}
+
+@{
+    try
+    {
+        if (Model.ErrorMessage != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show float-right" role="alert">
+                <strong>Error!</strong> @Model.ErrorMessage
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+    }
+    catch (Exception)
+    {
+
+    }
+
+}
+
+<div class="">
+    <h1 class=" ">Registrar Estudiante</h1>
+</div>
+<hr />
+<div class="row text-body">
+    <div class="col-md-4">
+        <form asp-action="AsignAssigment">
+            <input type="hidden" asp-for="StudentCode" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Codigo de Asignacion</label>
+                @Html.DropDownList("SubjectCode", new SelectList(ViewBag.SubjectList, "SubjectId", "SubjectCode"), new { @class = "form-control" })
+            </div>
+            <div>
+                <a type="button" value="Cancelar" asp-action="Index" class="btn btn-outline-danger">Cancelar</a>
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    @if (ViewBag.Success != null)
+    {
+        <script type="text/javascript">$(function SuccessMessage() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Asignacion asignada a estudiante correctamente!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    footer: 'Redirigiendo...'
+                })
+                setTimeout('Redirect()', 2000);
+            })
+
+            function Redirect() {
+                window.location = "/Students";
+            }</script>
+    }
+}

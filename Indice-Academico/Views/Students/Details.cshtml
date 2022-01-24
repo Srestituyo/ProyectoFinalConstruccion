@@ -1,0 +1,104 @@
+﻿@model Indice_Academico.Data.DTO.StudentDetailsDTO
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+ 
+<div class="text-center">
+    <h3 class="float-left">Estudiante</h3>
+    @Html.ActionLink("Asignar Asignacion", "AsignAssigment", "Students", new { theStudentCode = Model.StudentCode }, new { @class = "btn btn-outline-info float-right text-center" })
+    <a class="btn btn-outline-warning float-right text-center" href="/Scores/Create">Registrar Calificacion</a>
+</div>
+<div>
+    <table class="table">
+        <tbody>
+            <tr class="text-center">
+                <td>
+                    <span><b>Nombre:</b> @Html.DisplayTextFor(model => model.Firstname)</span>
+                </td>
+                <td>
+                    <label><b>Apellido:</b> @Html.DisplayFor(model => model.Lastname)</label>
+                </td>
+                <td>
+                    <label><b>Matricula:</b>  @Html.DisplayFor(model => model.StudentCode)</label>
+                </td>
+                <td>
+                    <label><b>Carrera:</b> @Html.DisplayFor(model => model.Career)</label>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="text-center">Reporte de Calificaciones</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <label>Asignatura</label>
+                </th>
+                <th>
+                    <label>Credito</label>
+                </th>
+                <th>
+                    <label>Nota</label>
+                </th>
+                <th>
+                    <label>Valor de Nota</label>
+                </th>
+                <th>
+                    <label>Puntos de Honor</label>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                try
+                {
+                    foreach (var item in Model.SubjectList)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Credit)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GradeInLetter)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Grade)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HonorScore)
+                            </td>
+                        </tr>
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+
+            <tr>
+                <td> </td>
+                <td>
+                    @Html.DisplayFor(model => model.TotalCredit)
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.TotalHonorScore)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+@*<div>
+    <a type="button" asp-action="Edit" asp-route-id="@Model.StudentCode" class="btn btn-outline-success">Editar</a>
+    <a type="button" value="Cancelar" asp-action="Index" class="btn btn-outline-danger">Cancelar</a>
+</div>*@

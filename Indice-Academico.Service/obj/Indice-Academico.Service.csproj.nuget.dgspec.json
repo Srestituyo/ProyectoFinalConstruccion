@@ -1,0 +1,195 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/Indice-Academico.Service.csproj": {}
+  },
+  "projects": {
+    "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/Indice-Academico.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/Indice-Academico.Data.csproj",
+        "projectName": "Indice-Academico.Data",
+        "projectPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/Indice-Academico.Data.csproj",
+        "packagesPath": "/Users/sebastianrestituyo/.nuget/packages/",
+        "outputPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sebastianrestituyo/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/5.0.207/libexec/sdk/5.0.207/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Repository/Indice-Academico.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Repository/Indice-Academico.Repository.csproj",
+        "projectName": "Indice-Academico.Repository",
+        "projectPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Repository/Indice-Academico.Repository.csproj",
+        "packagesPath": "/Users/sebastianrestituyo/.nuget/packages/",
+        "outputPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sebastianrestituyo/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/Indice-Academico.Data.csproj": {
+                "projectPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/Indice-Academico.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/5.0.207/libexec/sdk/5.0.207/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/Indice-Academico.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/Indice-Academico.Service.csproj",
+        "projectName": "Indice-Academico.Service",
+        "projectPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/Indice-Academico.Service.csproj",
+        "packagesPath": "/Users/sebastianrestituyo/.nuget/packages/",
+        "outputPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sebastianrestituyo/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/Indice-Academico.Data.csproj": {
+                "projectPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Data/Indice-Academico.Data.csproj"
+              },
+              "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Repository/Indice-Academico.Repository.csproj": {
+                "projectPath": "/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Repository/Indice-Academico.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/5.0.207/libexec/sdk/5.0.207/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+﻿@model Indice_Academico.Data.DTO.CreateTeacherDTO
+
+@{
+    ViewData["Title"] = "Registrar Profesor";
+}
+@{
+    try
+    {
+        if (@ViewBag.Error != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show float-right" role="alert">
+                <strong>Error!</strong> @ViewBag.Error
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+    }
+    catch (Exception)
+    {
+
+    }
+
+}
+<div class="">
+    <h1 class=" ">Registrar Profesor</h1>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Nombre</label>
+                <input asp-for="Firstname" class="form-control" />
+                <span asp-validation-for="Firstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Apellido</label>
+                <input asp-for="Lastname" class="form-control" />
+                <span asp-validation-for="Lastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Codigo del Profesor</label>
+                <input asp-for="TeacherCode" class="form-control" />
+                <span asp-validation-for="TeacherCode" class="text-danger"></span>
+            </div>
+            <div>
+                <a type="button" value="Cancelar" asp-action="Index" class="btn btn-outline-danger">Cancelar</a>
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

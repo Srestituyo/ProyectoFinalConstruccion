@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Indice_Academico.Data.Entity.Student>
+
+@{
+    ViewData["Title"] = "Student";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link href="~/css/studentCards.css" rel="stylesheet">
+<link href="~/css/studenteditmodal.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="text-center">
+    <h1 class="float-left">Listado de Estudiantes</h1>
+    <a class="btn btn-outline-info float-right text-center" asp-action="Create">Registrar Estudiante</a>
+</div>
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <div class="media">
+                            <img class="d-flex mr-3 rounded-circle img-thumbnail thumb-lg" src="https://dl.dropboxusercontent.com/s/aqzxhr51t7aida4/4781818_account_avatar_face_man_people_icon.png" alt="Generic placeholder image" />
+                            <div class="media-body">
+                                <h5 class="mt-0 font-18 mb-1">@Html.DisplayTextFor(modelItem => item.Firstname) @Html.DisplayFor(modelItem => item.Lastname)</h5>
+                                <p class="text-muted font-14"><b>Matricula: </b>@Html.DisplayFor(modelItem => item.StudentCode)</p>
+                                <p class="text-muted font-14"><b>Carrera: </b>@Html.DisplayFor(modelItem => item.Career)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <a class="btn btn-default" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Editar</a>
+                                    </th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr> 
+                                    <td>
+                                        <a class="btn btn-default" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-x-octagon-fill"></i>Eliminar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+    <!-- end row -->
+</div>
+@section Scripts {
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2  11"></script>
+
+    <script type="text/javascript">function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function setRandomColor() {
+            $("#colorpad").css("background-color", getRandomColor());
+        }</script>
+
+
+}

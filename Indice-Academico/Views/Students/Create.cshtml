@@ -1,0 +1,85 @@
+﻿@model Indice_Academico.Data.DTO.CreateStudentDTO
+
+@{
+    ViewData["Title"] = "Registrar Estudiante";
+}
+
+@{
+    try
+    {
+        if (@ViewBag.Error != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show float-right" role="alert">
+                <strong>Error!</strong> @ViewBag.Error
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+    }
+    catch (Exception)
+    {
+
+    }
+
+}
+
+<div class="">
+    <h1 class=" ">Registrar Estudiante</h1>
+</div>
+<hr />
+<div class="row text-body">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Nombre</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Apellido</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Matricula</label>
+                <input asp-for="StudentCode" class="form-control" />
+                <span asp-validation-for="StudentCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Carrera</label>
+                <input asp-for="Career" class="form-control" />
+                <span asp-validation-for="Career" class="text-danger"></span>
+            </div>
+            <div>
+                <a type="button" value="Cancelar" asp-action="Index" class="btn btn-outline-danger">Cancelar</a>
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    @if (ViewBag.Success != null)
+    {
+        <script type="text/javascript">$(function SuccessMessage() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Estudiante registrado correctamente!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    footer: 'Redirigiendo...'
+                })
+                setTimeout('Redirect()', 2000);
+            })
+
+            function Redirect() {
+                window.location = "/Students";
+            }</script>
+    }
+}

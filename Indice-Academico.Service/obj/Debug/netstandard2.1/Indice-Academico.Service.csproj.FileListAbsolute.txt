@@ -1,0 +1,14 @@
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/bin/Debug/netstandard2.1/Indice-Academico.Service.deps.json
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/bin/Debug/netstandard2.1/Indice-Academico.Service.dll
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/bin/Debug/netstandard2.1/Indice-Academico.Service.pdb
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/bin/Debug/netstandard2.1/Indice-Academico.Data.dll
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/bin/Debug/netstandard2.1/Indice-Academico.Repository.dll
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/bin/Debug/netstandard2.1/Indice-Academico.Repository.pdb
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/bin/Debug/netstandard2.1/Indice-Academico.Data.pdb
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/Debug/netstandard2.1/Indice-Academico.Service.csproj.AssemblyReference.cache
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/Debug/netstandard2.1/Indice-Academico.Service.AssemblyInfoInputs.cache
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/Debug/netstandard2.1/Indice-Academico.Service.AssemblyInfo.cs
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/Debug/netstandard2.1/Indice-Academico.Service.csproj.CoreCompileInputs.cache
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/Debug/netstandard2.1/Indice-Academico.Service.csproj.CopyComplete
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/Debug/netstandard2.1/Indice-Academico.Service.dll
+/Users/sebastianrestituyo/Documents/repos/Indice-Academico/Indice-Academico.Service/obj/Debug/netstandard2.1/Indice-Academico.Service.pdb
